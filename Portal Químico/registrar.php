@@ -41,7 +41,7 @@
         </div>
 
         <button type="submit" class="register">Registrar</button>
-        <p>Já tem uma conta? <a href="index.php">Login</a></p>
+        <p>Já tem uma conta? <a href="login.php">Login</a></p>
     </div>
             </form>
         </main>

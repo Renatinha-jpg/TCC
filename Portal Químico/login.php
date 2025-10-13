@@ -7,14 +7,13 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
     <title>Portal Químico - Login</title>
- 
+    
 </head>
 
-
 <body>
-        <main class = "container">
+    
+    <main class = "container">
               <div class="col s12 m8 offset-m2 l6 offset-l3">
             <form>
 
@@ -45,10 +44,17 @@
                 <div class="register">
                     <p>Não tem uma conta? <a href="registrar.php">Registre-se</a></p>
                 </div>
-            </div>
-
+            </div> 
+            
+           
                 </form>
-            </main>
+                <div class="voltar">
+                <a href="index.php"> Voltar à pagina inicial</a>
+                <div>
+            </main> 
+            
+           
+
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
