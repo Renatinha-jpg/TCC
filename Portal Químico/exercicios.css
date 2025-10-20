@@ -10,14 +10,14 @@
 body {
   display: flex;
   min-height: 100vh;
-  background-image: url('img/background.jpg');
-  background-size: cover;
+  background-image: url('img/FUNDO.jpg');
+  background-size: auto;
   background-position: center;
   font-family: 'Poppins', sans-serif;
 }
  
 .card {
-      background-color: #6284e9; 
+      background-color:  #8fa7ee;  
       text-align: center;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -47,4 +47,8 @@ body {
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+p{
+  color: #333333;
 }

@@ -20,7 +20,7 @@
       <p>Procurando algo específico?</p>
       <div class="input-field" style="max-width: 400px; margin: 0 auto;">
         <input id="search" type="search" required>
-        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <label class="label-icon" for="search"><i class="material-icons">Procurar</i></label>
       </div>
     </div>
 
@@ -29,7 +29,7 @@
     <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -43,7 +43,7 @@
     <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -57,7 +57,7 @@
     <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -73,7 +73,7 @@
     <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -86,7 +86,7 @@
   <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -99,7 +99,7 @@
  <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">

@@ -28,7 +28,7 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
 </p>
       </div>
       <div class="col s4">
-        <img src="R.jpeg" width="400" height="300">
+        <img src="img/02.jpg" width="400" height="300">
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
     <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -53,7 +53,7 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
     <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -66,7 +66,7 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
   <div class="col s4 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <img src="img/02.jpg">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
