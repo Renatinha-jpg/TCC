@@ -19,7 +19,7 @@
               } ?>><a href="exercicios.php">Exercícios</a></li>
          <li <?php if ($pc == 'exercicios.php') {
                 echo 'class="active"';
-              } ?>><a href="login.php">Login</a></li>
+              } ?>
          <li><a href="#login-modal" class="modal-trigger">Login</a></li>
        </ul>
      </div>
