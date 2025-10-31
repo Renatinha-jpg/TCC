@@ -12,7 +12,7 @@
 <body>
 <?php 
     include_once "header.php" ;
-    include_once "conect.php";
+    include_once "conecta.php";
 ?>
 <main class="container"> 
 <h1> Usuarios </h1> 
