@@ -12,6 +12,10 @@
 </head>
 
 <body>
+  <?php 
+    include_once "header.php" ;
+    include_once "conecta.php";
+?>
     <main class="container">
     <h4 class="center-align">Materiais Disponíveis</h4>
 

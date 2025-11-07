@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php 
+    include_once "headeradm.php" ;
+    include_once "conecta.php";
+?>
+
+<h3> Materiais </h3>
+
 </body>
 </html>

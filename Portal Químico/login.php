@@ -12,7 +12,11 @@
 </head>
 
 <body>
-    
+
+<?php 
+    include_once "header.php" ;
+    include_once "conecta.php";
+?>
     <main class = "container">
               <div class="col s12 m8 offset-m2 l6 offset-l3">
             <form>

@@ -11,7 +11,7 @@
     </head>
 <body>
 <?php 
-    include_once "header.php" ;
+    include_once "headeradm.php" ;
     include_once "conecta.php";
 ?>
 <main class="container"> 
@@ -27,14 +27,14 @@
         </thead>
         <tbody>
  <?php
- $sql = "SELECT id,nome,email FROM usuarios";
+ $sql = "SELECT id, nome, email FROM usuario";
  $resultado = mysqli_query($conexao,$sql);
  while ($linha = mysqli_fetch_assoc($resultado)) 
 { 
  ?> 
    <tr>
     <td> <?php echo $linha['id']; ?> </td>
-    <td> <?php echo $linha['nomeUsuario']; ?> </td>
+    <td> <?php echo $linha['nome']; ?> </td>
     <td> <?php echo $linha['email']; ?> </td>
     <td> <a href="#modal" class="modal-trigger">Deletar</a></td>
    </tr>   
