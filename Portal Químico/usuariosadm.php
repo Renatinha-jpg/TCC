@@ -22,12 +22,13 @@
               <th>ID</th>
               <th>Nome do Usuario</th>
               <th>E-mail</th>
-              <th>Operacao</th>
+              <th>Classe</th>
+              <th>Operações</th>
           </tr>
         </thead>
         <tbody>
  <?php
- $sql = "SELECT id, nome, email FROM usuario";
+ $sql = "SELECT id, nome, email, classe FROM usuario";
  $resultado = mysqli_query($conexao,$sql);
  while ($linha = mysqli_fetch_assoc($resultado)) 
 { 
@@ -36,7 +37,9 @@
     <td> <?php echo $linha['id']; ?> </td>
     <td> <?php echo $linha['nome']; ?> </td>
     <td> <?php echo $linha['email']; ?> </td>
-    <td> <a href="#modal" class="modal-trigger">Deletar</a></td>
+    <td> <?php echo $linha['classe']; ?> </td>
+    <td> <a href="#modal" class="modal-trigger">Deletar</a> |
+    <a href="altuser.php"> Alterar </a></td>
    </tr>   
   
    <?php
@@ -45,7 +48,10 @@
 
     </tbody>
     </table>
-      
+    
+    <h4> Deseja registrar um novo usuario? </h4>
+    <a href="resgistrar.php" name="reg"> Registrar<a>
+
 </main>
 <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="js/materialize.js"></script>

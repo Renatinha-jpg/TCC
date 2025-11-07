@@ -21,8 +21,14 @@
          <li <?php if ($pc == 'exercicios.php') {
                 echo 'class="active"';
               } ?>>
+
               <a href="exerciciosadm.php">Editar Exercícios</a></li>
          <li <?php if ($pc == 'exerciciosadm.php') {
+                echo 'class="active"';
+              } ?>>
+
+              <a href="usuariosadm.php">Editar Usuarios</a></li>
+         <li <?php if ($pc == 'usuariosadm.php') {
                 echo 'class="active"';
               } ?>>
 

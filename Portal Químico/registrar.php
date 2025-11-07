@@ -31,17 +31,17 @@ else {
                 <h1>Registrar</h1>
 
         <div class="input-box">
-            <input placeholder="Usuario" type="text">
+            <input placeholder="usuario" type="text">
             <i class ="bx bxs-user"></i>
         </div>
 
         <div class="input-box">
-            <input placeholder="Email" type="email">
+            <input placeholder="email" type="email">
             <i class ="bx bxs-envelope"></i>
         </div>
 
         <div class="input-box">
-            <input placeholder="Senha" type="password" id="senha">
+            <input placeholder="senha" type="password" id="senha">
             <i class ="bx bxs-lock-alt"></i>
         </div>
 
