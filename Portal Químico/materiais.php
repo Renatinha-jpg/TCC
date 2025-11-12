@@ -12,6 +12,10 @@
 </head>
 
 <body>
+  <?php 
+    include_once "header.php" ;
+    include_once "conecta.php";
+?>
     <main class="container">
     <h4 class="center-align">Materiais Disponíveis</h4>
 
@@ -30,11 +34,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
+          <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>
@@ -44,11 +47,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
+           <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>
@@ -58,11 +60,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
+           <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
       </div>
     </div>
@@ -74,11 +75,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
+           <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>
@@ -87,11 +87,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+           <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
+          <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>
@@ -100,11 +99,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
+           <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>

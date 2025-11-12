@@ -7,7 +7,8 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="materiais.css">
-    <?php include_once "header.php"; ?>
+    <?php include_once "header.php"; 
+    ?>
     <title>Portal Químico - Materiais</title>
 </head>
 
@@ -31,11 +32,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+           <span class="card-title activator grey-text text-darken-4">Exercícios sobre X</span>
+          <p>Aqui haverá uma descrição sobre o grupo de exercícios separados por temática.</p>
         </div>
     </div>
   </div>
@@ -45,11 +45,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+           <span class="card-title activator grey-text text-darken-4">Exercícios sobre X</span>
+          <p>Aqui haverá uma descrição sobre o grupo de exercícios separados por temática.</p>
         </div>
     </div>
   </div>
@@ -59,11 +58,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+           <span class="card-title activator grey-text text-darken-4">Exercícios sobre X</span>
+          <p>Aqui haverá uma descrição sobre o grupo de exercícios separados por temática.</p>
         </div>
       </div>
     </div>
@@ -75,11 +73,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+           <span class="card-title activator grey-text text-darken-4">Exercícios sobre X</span>
+          <p>Aqui haverá uma descrição sobre o grupo de exercícios separados por temática.</p>
         </div>
     </div>
   </div>
@@ -88,11 +85,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+           <span class="card-title activator grey-text text-darken-4">Exercícios sobre X</span>
+          <p>Aqui haverá uma descrição sobre o grupo de exercícios separados por temática.</p>
         </div>
     </div>
   </div>
@@ -101,11 +97,10 @@
       <div class="card">
         <div class="card-image">
           <img src="img/02.jpg">
-          <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+           <span class="card-title activator grey-text text-darken-4">Exercícios sobre X</span>
+          <p>Aqui haverá uma descrição sobre o grupo de exercícios separados por temática.</p>
         </div>
     </div>
   </div>
