@@ -14,7 +14,6 @@
 <body>
 
 <?php 
-    include_once "header.php" ;
     include_once "conecta.php";
 ?>
     <main class = "container">
@@ -46,7 +45,7 @@
                 <button type="submit" class="login">Entrar</button>
 
                 <div class="register">
-                    <p>Não tem uma conta? <a href="registrar.php">Registre-se</a></p>
+                    <p>Não tem uma conta? <a href="registrar.php">Registre-se!</a></p>
                 </div>
             </div> 
             
