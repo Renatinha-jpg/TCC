@@ -34,8 +34,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
-          <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
+          <span class="card-title activator white-text">Materiais sobre X</span>
+          <p class="white-text">Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>
@@ -47,8 +47,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
-           <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
+          <span class="card-title activator white-text">Materiais sobre X</span>
+           <p class="white-text">Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>
@@ -60,8 +60,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
-           <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
+          <span class="card-title activator white-text">Materiais sobre X</span>
+           <p class="white-text">Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
       </div>
     </div>
@@ -75,8 +75,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
-           <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
+          <span class="card-title activator white-text">Materiais sobre X</span>
+           <p class="white-text">Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>
@@ -87,8 +87,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-           <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
-          <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
+           <span class="card-title activator white-text">Materiais sobre X</span>
+          <p class="white-text">Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>
@@ -99,8 +99,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Materiais sobre X</span>
-           <p>Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
+          <span class="card-title activator white-text">Materiais sobre X</span>
+           <p class="white-text">Aqui haverá uma descrição sobre o grupo de materiais separados por temática.</p>
         </div>
     </div>
   </div>

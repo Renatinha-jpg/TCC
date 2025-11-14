@@ -4,7 +4,7 @@
   ?>
 
  <div class="navbar-fixed">
-   <nav class=" indigo darken-4">
+   <nav class=" light-blue darken-4">
      <div class="nav-wrapper container">
        <a href="#" class="brand-logo"></a>
        <ul id="nav-mobile" class="right hide-on-small-only">
@@ -19,7 +19,10 @@
               } ?>><a href="exercicios.php">Exercícios</a></li>
          <li <?php if ($pc == 'exercicios.php') {
                 echo 'class="active"';
-              } ?>
+              } ?>><a href="forum.php">forum</a></li>
+         <li <?php if ($pc == 'forum.php') {
+                echo 'class="active"';
+              } ?>></li>
          <li><a href="#login-modal" class="modal-trigger">Login</a></li>
        </ul>
      </div>
