@@ -9,16 +9,16 @@ body {
   display: center;
   min-height: 100vh;
   background-image: url('img/FUNDO.jpg');
-  background-size:  cover;  
+  background-size: cover;
   font-family: 'Poppins', sans-serif;
 }
  h2{
   text-align: center;
-  color: #333333;
+  color: #d9d9d9;
  }
 
  p{
-  color: #333333;
+  color: #dadada;
   text-align: center;
  }
 
@@ -39,3 +39,6 @@ body {
 transform: scale(1.05);
 box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
+
+/*background-size: auto;
+  background-repeat: no-repeat;

@@ -17,14 +17,11 @@
     <h4 class="center-align">Exercícios Disponíveis</h4>
 
 
-    <div class="search-box">
-      <p>Procurando algo específico?</p>
-      <div class="input-field" style="max-width: 400px; margin: 0 auto;">
-        <input id="search" type="search" required>
-        <label class="label-icon" for="search"><i class="material-icons">Procurar</i></label>
-      </div>
-    </div>
-
+    <div class="nav-search">
+              <div class="form-group">
+                <input type="text" placeholder="Procurar" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
    
        
     <div class="row">

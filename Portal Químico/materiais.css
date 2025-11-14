@@ -11,7 +11,7 @@ body {
   display: flex;
   min-height: 100vh;
   background-image: url('img/FUNDO.jpg');
-  background-size: cover;  
+  background-size: cover;
   background-position: center;
   font-family: 'Poppins', sans-serif;
 }
