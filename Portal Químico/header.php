@@ -4,7 +4,7 @@
   ?>
 
  <div class="navbar-fixed">
-   <nav class="light-blue darken-3">
+   <nav class=" indigo darken-4">
      <div class="nav-wrapper container">
        <a href="#" class="brand-logo"></a>
        <ul id="nav-mobile" class="right hide-on-small-only">
