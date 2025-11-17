@@ -8,26 +8,27 @@
 body {
   display: center;
   min-height: 100vh;
-  background-image: url('img/FUNDO.jpg');
+  background-image: url(img/FUNDO.jpg);
   background-size: cover;
   font-family: 'Poppins', sans-serif;
 }
  h2{
   text-align: center;
-  color: #d9d9d9;
+  color: #e7e7e7;
  }
 
  p{
-  color: #dadada;
+  color: #e7e7e7;
   text-align: center;
  }
 
  .card {
-      background-color: #8fa7ee; 
+      background-color: #283593; 
       text-align: center;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white;
     }
 
 .card .card-image img {

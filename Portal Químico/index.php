@@ -45,8 +45,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Destaque 1</span>
-           <p>Aqui haverá uma descrição sobre o destaque em questão.</p>
+          <span class="card-title activator white-text">Destaque 1</span>
+           <p class="white-text">Aqui haverá uma descrição sobre o destaque em questão.</p>
         </div>
     </div>
   </div>
@@ -58,8 +58,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Destaque 2</span>
-          <p>Aqui haverá uma descrição sobre o destaque em questão.</p>
+          <span class="card-title activator white-text">Destaque 2</span>
+          <p class="white-text">Aqui haverá uma descrição sobre o destaque em questão.</p>
         </div>
     </div>
   </div>
@@ -70,8 +70,8 @@
           <img src="img/02.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Destaque 3</span>
-          <p>Aqui haverá uma descrição sobre o destaque em questão.</p>
+          <span class="card-title activator white-text">Destaque 3</span>
+          <p class="white-text">Aqui haverá uma descrição sobre o destaque em questão.</p>
         </div>
     </div>
   </div>
