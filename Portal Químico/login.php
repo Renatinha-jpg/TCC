@@ -38,7 +38,7 @@
                     <input type="checkbox" checked="checked" name="remember"/>
                     Lembre-se de mim
                 </label>
-                    <a href="senhaesqueceu.php">Esqueceu a senha?</a>
+                    <a href="recuperarsenha.php">Esqueceu a senha?</a>
                 </div>
 
 

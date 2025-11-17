@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="esqueceu-senha">
-                    <a href="senhaesqueceu.php">Esqueceu a senha?</a>
+                    <a href="recuperarsenha.php">Esqueceu a senha?</a>
                 </div>
 
 
