@@ -20,7 +20,7 @@
          <li <?php if ($pc == 'exercicios.php') {
                 echo 'class="active"';
               } ?>
-         <li><a href="#login-modal" class="modal-trigger">Login</a></li>
+         ><li><a href="#login-modal" class="modal-trigger">Login</a></li>
        </ul>
      </div>
    </nav>
