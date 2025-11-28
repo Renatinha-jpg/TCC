@@ -38,20 +38,28 @@
     <td> <?php echo $linha['nome']; ?> </td>
     <td> <?php echo $linha['email']; ?> </td>
     <td> <?php echo $linha['classe']; ?> </td>
-    <td> <a href="#modal" class="modal-trigger">Deletar</a> |
+    <td> <a href="#modal<?php echo $linha['id']; ?>" class="modal-trigger">Deletar</a> |
     <a href="altuser.php"> Alterar </a></td>
    </tr>   
     
-  <div id="modal" class="modal">
+
+  <div id="modal<?php echo $linha['id']; ?>" class="modal">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <h4>Atenção</h4>
+      <p>Voce tem certeza de que quer apagar o registro de <?php echo $linha['nome'];?>?</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+
+      <form action="excluir.php" method="post">
+        <input type="hidden" name="id" value="<?php echo $linha['id'];?>">
+        <button class="btn waves-effect waves-light red" type="submit" name="action">Sim</button>
+    
+        <button class="modal-close btn green" type="button" name="action">Nao</button>
+      </form>
+ 
     </div>
   </div>
-
+   
    <?php
 }
 ?>
@@ -68,7 +76,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.modal');
-            var instances = M.Modal.init(elems, {});
+            var instances = M.Modal.init(elems, {
+              opacity: 0.7, 
+              inDuration: 1000,  
+            });
         });
     </script>
 
