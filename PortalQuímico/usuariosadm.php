@@ -50,7 +50,7 @@
     </div>
     <div class="modal-footer">
 
-      <form action="excluir.php" method="post">
+      <form action="excluirusuario.php" method="post">
         <input type="hidden" name="id" value="<?php echo $linha['id'];?>">
         <button class="btn waves-effect waves-light red" type="submit" name="action">Sim</button>
     
@@ -68,7 +68,7 @@
     </table>
     
     <h4> Deseja registrar um novo usuario? </h4>
-    <a href="resgistrar.php" name="reg"> Registrar<a>
+    <a href="registrarusuarioadm.php" name="reg"> Registrar<a>
 
 </main>
 <script type="text/javascript" src="js/materialize.min.js"></script>
