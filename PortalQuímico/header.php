@@ -17,12 +17,10 @@
          <li <?php if ($pc == 'exercicios.php') {
                 echo 'class="active"';
               } ?>><a href="exercicios.php">Exercícios</a></li>
-         <li <?php if ($pc == 'exercicios.php') {
-                echo 'class="active"';
-              } ?>><a href="forum.php">forum</a></li>
          <li <?php if ($pc == 'forum.php') {
                 echo 'class="active"';
-              } ?>></li>
+              } ?>><a href="forum.php">forum</a></li>
+         </li>
          <li><a href="#login-modal" class="modal-trigger">Login</a></li>
        </ul>
      </div>
