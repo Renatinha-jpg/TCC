@@ -1,6 +1,6 @@
 <?php
 $nome_arquivo = $_GET['nome_arquivo'];
-$pastaDestino = "/uploads/";
+$pastaDestino = "/uploads";
 $apagou = unlink(__DIR__ . $pastaDestino . $nome_arquivo);
 if ($apagou == true) {
     $conexao = mysqli_connect("localhost", "root", "", "upload-arquivos");

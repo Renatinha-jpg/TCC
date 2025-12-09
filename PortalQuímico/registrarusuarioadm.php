@@ -11,6 +11,7 @@
     </head>
 <body>
 <?php 
+    include "auth.php";
     include_once "headeradm.php" ;
     include_once "conecta.php";
 ?>

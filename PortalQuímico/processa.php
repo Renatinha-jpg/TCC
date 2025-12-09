@@ -1,18 +1,21 @@
+<?php include "conecta.php"; ?>
+<?php include "auth.php"; ?>
+
 <?php
 // Faz a conexão com o banco de dados
-include 'conecta.php';
+
 
 // Verifica se o formulário foi enviado via POST
 if ($_POST) {
 
     // Pega a mensagem do formulário
-    $mensagem = $_POST['mensagem'];
+    $comentario = $_POST['comentario'];
 
     // Valida se a mensagem não está vazia
-    if (!empty($mensagem)) {
+    if (!empty($comentario)) {
 
         // Prepara o comando SQL 
-        $sql = "INSERT INTO recados (mensagem) VALUES ('$mensagem')";
+        $sql = "INSERT INTO comentario (comentario, id_usuario) VALUES ('$comentario', '$id_usuario')";
 
         // Executa o comando SQL no banco
         if (mysqli_query($conexao, $sql)) {

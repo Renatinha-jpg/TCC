@@ -1,38 +1,32 @@
 <?php
-  $pc = basename($_SERVER['SCRIPT_NAME']);
-  //echo $pagina_corrente;
-  ?>
+ $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);
+ //echo $pagina_corrente;
+ ?>
 
- <div class="navbar-fixed">
-   <nav class="light-blue darken-3">
-     <div class="nav-wrapper container">
-       <a href="#" class="brand-logo"></a>
-       <ul id="nav-mobile" class="right hide-on-small-only">
-        <li <?php if ($pc == 'materiaisadm.php') {
-                echo 'class="active"';
-              } ?>>
-              <a href="homeadm.php">Editar Página Principal</a></li>
+<div class="navbar-fixed">    
+    <nav class="white">
+    <div class="nav-wrapper container">
+      <a href="img/pq.png" class="brand-logo"><img src="img/pq.png" height="60" width="250"></a>
+      <a href="img/pq.png" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li> <a class="black-text" <?php if($paginaCorrente == 'index.php'){echo 'style="text-decoration: underline;"';} ?> href="index.php">Home</a></li>
+        <li> <a class="black-text" <?php if($paginaCorrente == 'login.php'){echo 'style="text-decoration: underline;"';} ?> href="login.php">Login</a></li>    
+        <li> <a class="black-text" <?php if($paginaCorrente == 'forum.php'){echo 'style="text-decoration: underline;"';} ?> href="forum.php">Fórum</a></li>
+    </ul>
 
-         <li <?php if ($pc == 'materiaisadm.php') {
-                echo 'class="active"';
-              } ?>>
-              <a href="materiaisadm.php">Editar Materiais</a></li>
+    <?php if (is_logged_in()): ?>
+                <!-- Links para logado -->
+                <a href="perfil.php">Perfil (<?php echo $_SESSION['usuario']; ?>)</a>
+                <?php if (is_admin()): ?>
+                    <!-- Links extras para admin -->
+                    <a href="admin/gerenciar_usuarios.php">Gerenciar Usuários</a>
+                    <a href="admin/gerenciar_materiais.php">Gerenciar Materiais</a>
+                <?php endif; ?>
+                <a href="logout.php">Logout</a>
+            <?php else: ?>
+                <a href="login.php">Login</a>
+            <?php endif; ?>
 
-         <li <?php if ($pc == 'exercicios.php') {
-                echo 'class="active"';
-              } ?>>
-
-              <a href="exerciciosadm.php">Editar Exercícios</a></li>
-         <li <?php if ($pc == 'exerciciosadm.php') {
-                echo 'class="active"';
-              } ?>>
-
-              <a href="usuariosadm.php">Editar Usuarios</a></li>
-         <li <?php if ($pc == 'usuariosadm.php') {
-                echo 'class="active"';
-              } ?>>
-
-       </ul>
-     </div>
-   </nav>
- </div>
+    </div>
+  </nav>
+</div> 

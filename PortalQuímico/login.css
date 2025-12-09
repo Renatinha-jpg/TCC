@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('img/FUNDO.jpg');
+    background-color: #f5f7fa;
     background-size:cover;
     background-position: center;
 }
@@ -21,7 +21,7 @@ body{
 .container{
     width: 400px;
     height: auto;
-   background-color: rgba(0, 25, 79, 0.5);
+   background-image:url("img/FUNDO.jpg");
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     color: #fff;
@@ -61,12 +61,12 @@ body{
     font-size: 18px;
     padding: 20px 45px 20px 20px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    color: #000000;
+    color: #ffffff;
 }
 
 /* placeholder */
 .input-box input::placeholder{
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 300;
 } 
@@ -78,7 +78,7 @@ body{
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* input box */
@@ -103,12 +103,12 @@ body{
 /* checkbox */
 .esqueceu-senha label input{
     margin-right: 5px;
-    accent-color: #000000;
+    accent-color: #ffffff;
 }
 
 /* link */
 .esqueceu-senha a{
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -148,7 +148,7 @@ body{
 
 /* link registrar */
 .register-link a p{
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }
@@ -165,7 +165,7 @@ body{
 
 /* link voltar */
 .voltar-link a p{
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }

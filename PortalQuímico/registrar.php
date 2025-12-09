@@ -31,31 +31,37 @@ else {
                 <h1>Registrar</h1>
 
         <div class="input-box">
-            <input placeholder="usuario" type="text">
+            <input type="text" id="usuario" data-length="40" name="usuario" pattern="^[A-Za-zÀ-ÖØ-öø-ÿÇç ]+$" class="validate"> 
+            <label for="usuario">Usuario</label>
+            <span class="helper-text" data-error="usuario invalido"> </span>
             <i class ="bx bxs-user"></i>
         </div>
 
         <div class="input-box">
-            <input placeholder="email" type="email">
+            <input id="email" type="email" name="email" class="validate"> 
+            <label for="email">E-mail</label>
+            <span class= "helper-text" data-error="Email invalido"> </span>
             <i class ="bx bxs-envelope"></i>
         </div>
 
         <div class="input-box">
-            <input placeholder="senha" type="password" id="senha">
-            <i class ="bx bxs-lock-alt"></i>
+            <input type="password" id="senha" data-length="20" name="senha">
+            <label for="senha">Senha</label>
+            <i class ="bx bxs-lock"></i> 
         </div>
 
 
         <div class="input-box">
-            <input placeholder="Confirmar Senha" type="password" id="confirmar">
-            <i class ="bx bxs-lock-alt"></i>
+            <input type="password" id="confirmar" data-length="20" name="Confirmar Senha">
+            <label for="Confirmar Senha">Confirmar Senha</label>
+            <i class ="bx bxs-lock"></i> 
         </div>
         <div id="mensagem">
             <?php echo $mensagem; ?>
         </div>
 
         <button type="submit" class="register" id="register" disabled>Registrar</button>
-        <p>Já tem uma conta? <a href="index.php">Voltar à pagina inicial</a></p>
+        <p>Já tem uma conta? <a href="login.php"> </a> <a href="index.php">Voltar à pagina inicial</a></p>
     </form>
 </div>
         </main>
@@ -89,5 +95,6 @@ else {
     senha.addEventListener("input", verificarSenhas);
     confirmarSenha.addEventListener("input", verificarSenhas);
 </script>
+
 </body>
 </html>

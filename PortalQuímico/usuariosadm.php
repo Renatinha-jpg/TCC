@@ -13,6 +13,7 @@
 <?php 
     include_once "headeradm.php" ;
     include_once "conecta.php";
+    include "auth.php";
 ?>
 <main class="container"> 
 <h1> Usuarios </h1> 

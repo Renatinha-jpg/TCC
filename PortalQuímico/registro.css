@@ -13,7 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('img/FUNDO.jpg');
+    background-color: #f5f7fa;
     background-size: cover;
     background-position: center;
 }
@@ -22,7 +22,7 @@ body{
 .container{
     width: 400px;
     height: auto;
-   background-color: rgba(5, 19, 46, 0.841);
+    background-image: url("img/FUNDO.jpg");
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     color: #ffffff;
@@ -65,13 +65,6 @@ body{
     color: #ffffff;
 }
 
-/* placeholder */
-.input-box input::placeholder{
-    color: #c5c5c5;
-    font-size: 16px;
-    font-weight: 300;
-} 
-
 /* icone */
 .input-box i{
     position: absolute;
@@ -82,7 +75,12 @@ body{
     color: #ffffff;
 }
 
-/* button */
+.input-box text{
+    border-bottom: 0px;
+    border-top: 10px;
+}
+
+/* botao */
 .register{
     width: 100%;
     padding: 15px;

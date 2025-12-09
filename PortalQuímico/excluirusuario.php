@@ -1,4 +1,5 @@
 <?php
+include "auth.php";
 include "conecta.php";
 $id = $_POST['id'];
 $sql = "DELETE FROM usuario WHERE id = $id";

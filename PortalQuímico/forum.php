@@ -1,48 +1,55 @@
+<?php include "conecta.php"; ?>
+<?php include "auth.php"; ?>
+<?php
+$host = 'localhost';
+$db = 'quimica';
+$user = 'root';
+$pass = '';  // Mude se necessário
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro na conexão: " . $e->getMessage());
+}
+
+?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mural de Recados</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" href="forum.css">
+    
+    <title>Forum - Portal Químico</title>
+    
 </head>
 <body>
+    <?php include 'header.php'; ?>
+    <div class="page-header">
+        <div class="container">
+            <h3 class="center" style="margin:0; font-size:2.8rem;">
+                <h3>Perguntas Recentes</h3>
+        </div>
+    </div>
 
-    <h1>Mural de Recados</h1>
+<div class="container section">
+<?php
+$stmt = $pdo->query("SELECT p.*, u.usuario FROM perguntas p JOIN usuarios u ON p.id = u.id_usuario ORDER BY created_at DESC");
+while ($row = $stmt->fetch()) {
+    echo "<div class='card'>
+            <div class='card-content'>
+                <span class='card-title'>{$row['titulo']}</span>
+                <p>{$row['conteudo']}</p>
+                <small>Por: {$row['usuario']} em {$row['created_at']}</small>
+                <a href='resposta.php?id={$row['id_pergunta']}'>Responder</a>
+            </div>
+          </div>";
+}
+?>
 
-    <h2>Deixe sua mensagem:</h2>
-    <form action="processa.php" method="POST">
-        <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea> <br>
-        <input type="submit" value="Publicar Mensagem">
-    </form>
-
-    <hr>
-
-    <h2>Recados Postados:</h2>
-    <?php
-    // Faz a conexão com o banco
-    include 'conecta.php';
-
-    // Seleciona todos os recados do banco, ordenados do mais novo para o mais antigo
-    $sql = "SELECT * FROM comentario ORDER BY data_postagem DESC";
-    $resultado = mysqli_query($conexao, $sql);
-
-    // Verifica se há recados
-    if (mysqli_num_rows($resultado) > 0) {
-
-        // Exibe cada um dos recados
-        while ($linha = mysqli_fetch_assoc($resultado)) {
-
-            // Formata a data e hora para um formato mais amigável...
-            $dataFormatada = date('d/m/Y H:i:s', strtotime($linha['data_postagem']));
-
-            echo '<p> Postado em: ' . $dataFormatada . '<br>';
-            echo '<p>' . $linha['mensagem'] . '</p> <hr>';
-        }
-
-    } else { // se ainda não houver recados..
-        echo '<p> Nenhuma pergunta ainda.</p>';
-    }
-
-    ?>
+</div>
 </body>
 </html>
