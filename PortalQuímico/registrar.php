@@ -19,7 +19,7 @@ else {
 <?php 
     include_once "conecta.php";
 ?>
-    <title>Portal Químico - Registro</title>
+    <title>Portal Químico - Cadastro</title>
 </head>
 <body>
 
@@ -28,7 +28,7 @@ else {
               <div class="col s12 m8 offset-m2 l6 offset-l3">
             <form method="post" action="registrado.php">
                     
-                <h1>Registrar</h1>
+                <h1>Cadastrar-se</h1>
 
         <div class="input-box">
             <input type="text" id="usuario" data-length="40" name="usuario" pattern="^[A-Za-zÀ-ÖØ-öø-ÿÇç ]+$" class="validate"> 

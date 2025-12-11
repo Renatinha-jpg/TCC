@@ -1,5 +1,6 @@
 <?php include "conecta.php"; 
-if (!isset($_SESSION['user_id'])) header("Location: login.php"); ?>
+include "auth.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +9,8 @@ if (!isset($_SESSION['user_id'])) header("Location: login.php"); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
-    <link rel="stylesheet" href="forum.css">
-    <?php include "auth.php"; ?>
+    <link rel="stylesheet" href="pergunta.css">
+    
     <title>Forum - Portal Químico</title>
     
 </head>
@@ -29,7 +30,7 @@ if (!isset($_SESSION['user_id'])) header("Location: login.php"); ?>
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $titulo = $_POST['titulo'];
     $conteudo = $_POST['conteudo'];
-    $user_id = $_SESSION['user_id'];
+    $user_id = $_SESSION['id_usuario'];
 
     $stmt = $pdo->prepare("INSERT INTO perguntas (titulo, conteudo, usuario_id) VALUES (?, ?, ?)");
     $stmt->execute([$titulo, $conteudo, $user_id]);

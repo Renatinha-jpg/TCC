@@ -93,11 +93,6 @@
             border-radius: 50px;
             padding: 0 1.5rem;
         }
-        
-        footer {
-            background: var(--dark);
-            color: #0a1a2f;
-            text-align: center;
-            padding: 3rem 20px;
-            margin-top: 5rem;
+        .btn-download:hover {
+            background: #3a8edc;
         }

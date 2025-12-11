@@ -12,7 +12,7 @@
 <body>
 <?php 
     include "auth.php";
-    include_once "headeradm.php" ;
+    include_once "header.php" ;
     include_once "conecta.php";
 ?>
     <h1>oi</h1>

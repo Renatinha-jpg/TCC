@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +17,17 @@
 </head>
 <body>
     <?php 
-    include "auth.php";
-    include_once "headeradm.php" ;
+    include_once "auth.php";
+    include_once "header.php" ;
     include_once "conecta.php";
 ?>
 
 <h3> Materiais </h3>
 
 <?php
-$conexao = mysqli_connect("localhost", "root", "", "quimica");
+$conn = mysqli_connect("localhost", "root", "", "quimica");
 $sql = "SELECT * FROM materiais";
-$resultado = mysqli_query($conexao, $sql);
+$resultado = mysqli_query($conn, $sql);
 if ($resultado != false) {
     $arquivos = mysqli_fetch_all($resultado, MYSQLI_BOTH);
 } else {
@@ -49,20 +51,20 @@ if ($resultado != false) {
                 $arq = $arquivo['nome'];
                 echo "<tr>"; // iniciar a linha
                 echo "<td><img src='materiais/$arq' width='100px' height='100px'></td>"; // exibe imagem
-                echo "<td><a href='materiais/$arq'>$arq</a></td>"; // 1ª coluna com o nome do arquivo
+              echo "<td><a href='materiais/{$arquivo['material']}' target='_blank'>{$arquivo['nome']}</a></td>";
                 echo "<td>"; // iniciar a 2ª coluna
                 echo "<a "; // abriu o link (abriu a tag a)
                 echo "href='alterar.php?nome=$arq'>"; // inseriu o link
                 echo "Alterar"; // imprimiu o texto da tag a
                 echo "</a>"; // fechei a tag a (fechei o link)
                 echo "</td>"; // fechei a 2ª coluna
-                echo "<td>"; // abri a 3ª coluna
-                echo "<button "; // abrir o botão
-                echo "onclick="; // criou o atributo onclick
-                echo "'excluir(\"$arq\");'>"; // chamamos a função excluir
-                echo "Excluir"; // mostrar o texto do botão
-                echo "</button>"; // fechar o botão
-                echo "</td>"; // fechar a 3ª coluna
+
+               echo "<td>
+    <button class='btn red waves-effect waves-light' 
+            onclick='excluir(\"{$arquivo['material']}\")'>
+        <i class='material-icons'>delete</i> Excluir
+    </button>
+</td>";
                 echo "</tr>"; // fechar a linha
             }
             ?>
@@ -71,11 +73,10 @@ if ($resultado != false) {
 
     <script>
         function excluir(nome_arquivo) {
-            let deletar = confirm("Você tem certeza que deseja excluir o arquivo " + nome_arquivo + "?");
-            if (deletar == true) {
-                window.location.href = "deletar.php?nome_arquivo=" + nome_arquivo;
-            }
-        }
+    if (confirm("Tem certeza que deseja excluir este material?")) {
+        window.location.href = "deletar.php?arquivo=" + encodeURIComponent(nome_arquivo);
+    }
+}
     </script>
 </body>
 </html>

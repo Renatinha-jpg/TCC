@@ -11,9 +11,9 @@
     </head>
 <body>
 <?php 
-    include_once "headeradm.php" ;
+    include_once "header.php" ;
     include_once "conecta.php";
-    include "auth.php";
+    include_once "auth.php";
 ?>
 <main class="container"> 
 <h1> Usuarios </h1> 
@@ -29,30 +29,30 @@
         </thead>
         <tbody>
  <?php
- $sql = "SELECT id, nome, email, classe FROM usuario";
- $resultado = mysqli_query($conexao,$sql);
+ $sql = "SELECT id_usuario, usuario, email, tipo FROM usuarios";
+ $resultado = mysqli_query($conn,$sql);
  while ($linha = mysqli_fetch_assoc($resultado)) 
 { 
  ?> 
    <tr>
-    <td> <?php echo $linha['id']; ?> </td>
-    <td> <?php echo $linha['nome']; ?> </td>
+    <td> <?php echo $linha['id_usuario']; ?> </td>
+    <td> <?php echo $linha['usuario']; ?> </td>
     <td> <?php echo $linha['email']; ?> </td>
-    <td> <?php echo $linha['classe']; ?> </td>
-    <td> <a href="#modal<?php echo $linha['id']; ?>" class="modal-trigger">Deletar</a> |
-    <a href="altuser.php"> Alterar </a></td>
+    <td> <?php echo $linha['tipo']; ?> </td>
+    <td> <a href="#modal<?php echo $linha['id_usuario']; ?>" class="modal-trigger">Deletar</a> |
+    <a href="altuser.php?id=<?php echo $linha['id_usuario']; ?>" class="blue-text">Alterar</a>
    </tr>   
     
 
-  <div id="modal<?php echo $linha['id']; ?>" class="modal">
+  <div id="modal<?php echo $linha['id_usuario']; ?>" class="modal">
     <div class="modal-content">
       <h4>Atenção</h4>
-      <p>Voce tem certeza de que quer apagar o registro de <?php echo $linha['nome'];?>?</p>
+      <p>Voce tem certeza de que quer apagar o registro de <?php echo $linha['usuario'];?>?</p>
     </div>
     <div class="modal-footer">
 
       <form action="excluirusuario.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $linha['id'];?>">
+        <input type="hidden" name="id" value="<?php echo $linha['id_usuario'];?>">
         <button class="btn waves-effect waves-light red" type="submit" name="action">Sim</button>
     
         <button class="modal-close btn green" type="button" name="action">Nao</button>
