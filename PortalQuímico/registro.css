@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-    /* body */
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,22 +15,19 @@ body{
     background-position: center;
 }
 
-    /* container*/
-.container{
+.container {
     width: 400px;
     height: auto;
     background-image: url("img/FUNDO.jpg");
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     color: #ffffff;
-    padding: 30px 40px;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    padding: 0px 50px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
 
-
-/* h1 */
-.container h1{
-  font-size: 30px;
+.container h1 {
+    font-size: 30px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
@@ -41,8 +35,7 @@ body{
     justify-content: center;
 }
 
-/* input box*/
-.input-box{
+.input-box {
     position: relative;
     width: 100%;
     height: 50px;
@@ -50,8 +43,7 @@ body{
     margin-bottom: 30px;
 }
 
-/* input */
-.input-box input{
+.input-box input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -65,8 +57,7 @@ body{
     color: #ffffff;
 }
 
-/* icone */
-.input-box i{
+.input-box i {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -75,13 +66,12 @@ body{
     color: #ffffff;
 }
 
-.input-box text{
+.input-box text {
     border-bottom: 0px;
     border-top: 10px;
 }
 
-/* botao */
-.register{
+.register {
     width: 100%;
     padding: 15px;
     border: none;
@@ -92,12 +82,13 @@ body{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.register:hover{
+
+.register:hover {
     background-color: #0056b3;
+    transition: 0.5s;
 }
 
-/* input box */
-.input-box{
+.input-box {
     position: relative;
     width: 100%;
     height: 50px;
@@ -106,20 +97,46 @@ body{
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
 }
 
 p {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
 }
+
 p a {
-  color: #a3cefc;
-  text-decoration: none;
+    color: #a3cefc;
+    text-decoration: none;
 }
+
 p a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #4caf50;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
 }

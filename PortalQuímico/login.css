@@ -1,38 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f5f7fa;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
 }
 
-    /* container*/
-.container{
+.container {
     width: 400px;
     height: auto;
-   background-image:url("img/FUNDO.jpg");
+    background-image: url("img/FUNDO.jpg");
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     color: #fff;
     padding: 30px 40px;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
 
-
-/* h1 */
-.container h1{
-  font-size: 30px;
+.container h1 {
+    font-size: 30px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
@@ -40,8 +37,7 @@ body{
     justify-content: center;
 }
 
-/* input box*/
-.input-box{
+.input-box {
     position: relative;
     width: 100%;
     height: 50px;
@@ -49,8 +45,7 @@ body{
     margin-bottom: 30px;
 }
 
-/* input */
-.input-box input{
+.input-box input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -64,15 +59,13 @@ body{
     color: #ffffff;
 }
 
-/* placeholder */
-.input-box input::placeholder{
+.input-box input::placeholder {
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
-} 
+}
 
-/* icone */
-.input-box i{
+.input-box i {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -81,8 +74,7 @@ body{
     color: #ffffff;
 }
 
-/* input box */
-.input-box{
+.input-box {
     position: relative;
     width: 100%;
     height: 50px;
@@ -90,8 +82,7 @@ body{
     margin-bottom: 30px;
 }
 
-/* botao */
-.esqueceu-senha{
+.esqueceu-senha {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,61 +91,50 @@ body{
     margin: -15px 10px 15px 10px;
 }
 
-/* checkbox */
-.esqueceu-senha label input{
+.esqueceu-senha label input {
     margin-right: 5px;
     accent-color: #ffffff;
 }
 
-/* link */
-.esqueceu-senha a{
+.esqueceu-senha a {
     color: #ffffff;
     text-decoration: none;
 }
 
-/* quando passa o mouse em cima do link */
-.esqueceu-senha a:hover{
+.esqueceu-senha a:hover {
     text-decoration: underline;
 }
 
-/* botao entrar */
-.login{
+.login {
     width: 100%;
-    height: 50px;
-    background:  #8fa7ee; 
+    padding: 15px;
     border: none;
     border-radius: 40px;
+    background-color: #007BFF;
+    color: #ffffff;
     font-size: 18px;
-    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
-/* quando passa o mouse em cima do botao entrar */
-.login:hover{
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: #333333;
+.login:hover {
+    background-color: #0056b3;
     transition: 0.5s;
 }
 
-/* link registrar */
-.register-link{
+.register-link {
     text-align: center;
     margin: 20px 0 15px;
     font-size: 14px;
 }
 
-/* link registrar */
-.register-link a p{
+.register-link a p {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }
 
-/* quando passa o mouse em cima do link registrar */
-.register-link a:hover{
+.register-link a:hover {
     text-decoration: underline;
 }
 
@@ -163,14 +143,12 @@ body{
     justify-content: center;
 }
 
-/* link voltar */
-.voltar-link a p{
+.voltar-link a p {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }
 
-/* quando passa o mouse em cima do link voltar */
-.voltar-link a:hover{
+.voltar-link a:hover {
     text-decoration: underline;
 }

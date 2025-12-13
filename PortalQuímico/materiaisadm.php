@@ -1,82 +1,130 @@
+<?php
+include_once "auth.php";
+include_once "conecta.php";
+include_once "header.php";
 
+if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin') {
+    header("Location: index.php");
+    exit();
+}
+?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materiais Administrador</title>
-    <!-- Materialize CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <!-- Material Icons -->
+    <title>Gerenciar Materiais - Portal Químico</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <?php 
-    include_once "auth.php";
-    include_once "header.php" ;
-    include_once "conecta.php";
-?>
+    <style>
+        .actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
 
-<h3> Materiais </h3>
+        .container {
+            margin-bottom: 50px;
+        }
+    </style>
+    <div class="container">
+        <h3 class="center blue-text text-darken-2">Gerenciar Materiais</h3>
+        <a href="uploadmateriais.php" class="btn-floating btn-large waves-effect waves-light blue right" title="Enviar novo">
+            <i class="material-icons">add</i>
+        </a>
 
-<?php
-$conn = mysqli_connect("localhost", "root", "", "quimica");
-$sql = "SELECT * FROM materiais";
-$resultado = mysqli_query($conn, $sql);
-if ($resultado != false) {
-    $arquivos = mysqli_fetch_all($resultado, MYSQLI_BOTH);
-} else {
-    echo "Erro ao executar comando SQL.";
-    die();
-}
-?>
-<input type="button" value="Enviar Novo Material" onclick="window.location.href='uploadmateriais.php'">
-    </form>
-    <br><br>
-    <table>
-        <thead>
-            <tr>
-                <th colspan="2">Arquivo</th>
-                <th colspan="2">Opções</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            foreach ($arquivos as $arquivo) {
-                $arq = $arquivo['nome'];
-                echo "<tr>"; // iniciar a linha
-                echo "<td><img src='materiais/$arq' width='100px' height='100px'></td>"; // exibe imagem
-              echo "<td><a href='materiais/{$arquivo['material']}' target='_blank'>{$arquivo['nome']}</a></td>";
-                echo "<td>"; // iniciar a 2ª coluna
-                echo "<a "; // abriu o link (abriu a tag a)
-                echo "href='alterar.php?nome=$arq'>"; // inseriu o link
-                echo "Alterar"; // imprimiu o texto da tag a
-                echo "</a>"; // fechei a tag a (fechei o link)
-                echo "</td>"; // fechei a 2ª coluna
+        <table class="highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Arquivo</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT id_material, nome, descricao, material FROM materiais ORDER BY id_material DESC";
+                $resultado = $conn->query($sql);
 
-               echo "<td>
-    <button class='btn red waves-effect waves-light' 
-            onclick='excluir(\"{$arquivo['material']}\")'>
-        <i class='material-icons'>delete</i> Excluir
-    </button>
-</td>";
-                echo "</tr>"; // fechar a linha
-            }
-            ?>
-        </tbody>
-    </table>
+                if ($resultado->num_rows > 0):
+                    while ($mat = $resultado->fetch_assoc()):
+                        $arquivo = $mat['material'];
+                        $ext = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
+                        $icone = $ext === 'pdf' ? 'picture_as_pdf' : 'image';
+                ?>
+                        <tr>
+                            <td>
+                                <i class="material-icons"><?php echo $icone; ?></i>
+                                <a href="materiais/<?php echo $arquivo; ?>" target="_blank">
+                                    <?php echo htmlspecialchars($mat['nome']); ?>
+                                </a>
+                            </td>
+                            <td><?php echo htmlspecialchars($mat['nome']); ?></td>
+                            <td><?php echo htmlspecialchars($mat['descricao'] ?: 'Sem descrição'); ?></td>
+                            <td>
+                                <a href="alterar.php?id=<?php echo $mat['id_material']; ?>"
+                                    class="btn-floating waves-effect waves-light blue tooltipped"
+                                    data-position="top" data-tooltip="Editar">
+                                    <i class="material-icons">edit</i>
+                                </a>
 
+
+                                <a href="#modal<?php echo $mat['id_material']; ?>" class="btn-floating waves-effect waves-light red modal-trigger">
+                                    <i class="material-icons">delete</i>
+                                </a>
+                            </td>
+                        </tr>
+
+
+                        <div id="modal<?php echo $mat['id_material']; ?>" class="modal">
+                            <div class="modal-content">
+                                <h3>Atenção!</h3>
+                                <p>Tem certeza que deseja <strong>excluir permanentemente</strong> o material:</p>
+                                <p class="blue-text text-darken-2"><b>"<?php echo htmlspecialchars($mat['nome']); ?>"</b></p>
+                                <p class="red-text">Esta ação <strong>não pode ser desfeita</strong>.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <form action="deletar.php" method="POST" style="display:inline;">
+                                    <input type="hidden" name="id" value="<?php echo $mat['id_material']; ?>">
+                                    <button type="submit" class="btn green waves-effect waves-light">
+                                        <i class="material-icons left">delete_forever</i> Sim, Excluir
+                                    </button>
+                                </form>
+                                <a href="#!" class="modal-close btn red waves-effect waves-light" style="margin-left:10px;">
+                                    <i class="material-icons left">cancel</i> Cancelar
+                                </a>
+                            </div>
+                        </div>
+
+                <?php
+                    endwhile;
+                else:
+                    echo '<tr><td colspan="4" class="center grey-text">Nenhum material encontrado.</td></tr>';
+                endif;
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="js/materialize.min.js"></script>
     <script>
-        function excluir(nome_arquivo) {
-    if (confirm("Tem certeza que deseja excluir este material?")) {
-        window.location.href = "deletar.php?arquivo=" + encodeURIComponent(nome_arquivo);
-    }
-}
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            M.Modal.init(elems, {
+                opacity: 0.8,
+                inDuration: 300,
+                outDuration: 200
+            });
+        });
     </script>
 </body>
+
 </html>

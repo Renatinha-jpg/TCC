@@ -1,28 +1,39 @@
-        body { 
-            font-family: 'Poppins', sans-serif; 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
             background: #f5f7fa;
             min-height: 100vh;
         }
-        .nav-color { 
-            background: #4fa1eb; 
+
+        .nav-color {
+            background: #4fa1eb;
         }
 
-        .page-header { 
-         background-image: url("img/FUNDO.jpg");
-         background-size: cover;
-         background-position: center;
-         background-repeat: no-repeat;
-         padding: 3rem 0; 
+        .page-header {
+            background-image: url("img/FUNDO.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 3rem 2rem;
         }
+
         h3 {
             color: white;
             font-size: 2.8rem;
             margin: 0;
         }
+
         p {
             color: white;
             opacity: 0.9;
         }
+
         .search-box {
             max-width: 700px;
             margin: 0 auto;
@@ -33,7 +44,7 @@
             height: 100%;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
@@ -64,6 +75,7 @@
             align-content: center;
             position: fixed;
         }
+
         .card-title {
             font-size: 1.25rem;
             font-weight: 600;
@@ -93,6 +105,7 @@
             border-radius: 50px;
             padding: 0 1.5rem;
         }
+
         .btn-download:hover {
             background: #3a8edc;
         }

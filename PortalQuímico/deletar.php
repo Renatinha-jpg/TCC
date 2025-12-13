@@ -1,45 +1,39 @@
 <?php
 session_start();
-
-// Só admin pode deletar
-if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin') {
-    die("Acesso negado. Você não é administrador.");
-}
-
-if (!isset($_GET['arquivo']) || empty($_GET['arquivo'])) {
-    die("Nenhum arquivo informado.");
-}
-
-// Segurança: remove qualquer tentativa de path traversal
-$nome_arquivo = basename($_GET['arquivo']);
-$caminho_arquivo = __DIR__ . "/materiais/" . $nome_arquivo;
-
-// Verifica se o arquivo realmente existe
-if (!file_exists($caminho_arquivo)) {
-    die("Erro: Arquivo não encontrado no servidor.<br>
-         Nome esperado: <code>$nome_arquivo</code><br>
-         Caminho verificado: <code>$caminho_arquivo</code>");
-}
-
 include_once "conecta.php";
+if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin') {
+    die("Acesso negado.");
+}
 
-// Primeiro apaga do banco
-$sql = "DELETE FROM materiais WHERE material = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $nome_arquivo);
+if (!isset($_POST['id'])) {
+    header("Location: materiaisadm.php");
+    exit();
+}
 
-if ($stmt->execute()) {
-    // Depois apaga o arquivo físico
-    if (unlink($caminho_arquivo)) {
-        header("Location: materiaisadm.php?sucesso=1");
-        exit();
+$id = (int)$_POST['id'];
+
+$stmt = $conn->prepare("SELECT material FROM materiais WHERE id_material = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($row = $result->fetch_assoc()) {
+    $arquivo = $row['material'];
+    $caminho = __DIR__ . "/materiais/" . $arquivo;
+
+    $delete = $conn->prepare("DELETE FROM materiais WHERE id_material = ?");
+    $delete->bind_param("i", $id);
+
+    if ($delete->execute()) {
+        if (file_exists($caminho)) {
+            unlink($caminho);
+        }
+        header("Location: materiaisadm.php?excluido=1");
     } else {
-        echo "Erro ao deletar o arquivo do servidor (permissão?).";
+        header("Location: materiaisadm.php?erro=1");
     }
 } else {
-    echo "Erro ao deletar do banco de dados: " . $conn->error;
+    header("Location: materiaisadm.php?erro=1");
 }
-
-$stmt->close();
-$conn->close();
+exit();
 ?>
