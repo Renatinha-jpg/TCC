@@ -1,0 +1,41 @@
+ :root {
+     --primary: #4fa1eb;
+     --dark: #0a1a2f;
+     --gray: #f4f7fa;
+     --light-gray: #e1e8ed;
+     --text: #2d3748;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Poppins', sans-serif;
+     background-color: var(--gray);
+     color: var(--text);
+     line-height: 1.6;
+ }
+
+ .hero {
+     background-image: url("img/FUNDO.jpg");
+     color: white;
+     text-align: center;
+     padding: 60px 30px 30px;
+ }
+
+ .hero h1 {
+     font-size: 3rem;
+     margin-bottom: 1rem;
+ }
+
+ .hero p {
+     font-size: 1.3rem;
+     max-width: 700px;
+     margin: 0 auto 2rem;
+ }
+.links {
+    align-items: center;
+}

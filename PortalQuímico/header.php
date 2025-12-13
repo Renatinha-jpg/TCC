@@ -10,6 +10,7 @@ $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);
     text-decoration-color: #4fa1eb; 
     text-decoration-thickness: 3px; 
   }
+  
 </style>
 
 <div class="navbar-fixed">
@@ -17,12 +18,8 @@ $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);
     <div class="nav-wrapper container">
 
       <a href="index.php" class="brand-logo">
-        <img src="img/pq.png" height="60" width="250" alt="Portal Químico">
-      </a>
-
-      <a href="#" data-target="mobile" class="sidenav-trigger black-text">
-        <i class="material-icons">menu</i>
-      </a>
+        <img src="img/PortalQuímico.png" height="90" width="250" alt="Portal Químico">
+</a>
 
       <ul class="right hide-on-med-and-down">
         <li><a class="black-text <?php echo $paginaCorrente == 'index.php' ? 'underline' : ''; ?>" href="index.php">Home</a></li>
@@ -32,7 +29,7 @@ $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);
         <?php if (isset($_SESSION['id_usuario'])): ?>
 
           <?php if ($_SESSION['tipo'] === 'admin'): ?>
-            <li><a class="black-text" href="materiaisadm.php">Gerenciar</a></li>
+            <li><a class="black-text" href="materiaisadm.php">Postagens</a></li>
             <li><a class="black-text" href="usuariosadm.php">Usuários</a></li>
           <?php endif; ?>
 

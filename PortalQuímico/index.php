@@ -51,7 +51,7 @@
             <div class="col s12 m6 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light center" style="background: #313372ff; padding: 40px;">
-                        <i class="material-icons large" style="color: #f0feffff;">box</i>
+                        <i class="material-icons large" style="color: #f0feffff;">science</i>
                     </div>
                     <div class="card-content">
                         <span class="card-title"><b><i> Caixa de recursos com material concreto</i></b></span>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title"><b><i>Sugestões de atividades que utilizem a caixa de recursos</i></b></span>
-                        <p><b>Descrição do terceiro destaque.</b></p>
+                        <p><b>Sugestões de atividades que podem ser realizadas com a caixa de recursos...</b></p>
                         <a href="destaque3.php">Ver Mais</a>
                     </div>
                 </div>
