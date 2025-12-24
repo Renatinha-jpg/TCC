@@ -37,8 +37,7 @@
             <div class="col s12 m6 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light center" style="background: #313372ff; padding: 40px;">
-                        <i class="material-icons large" style="color: #f0feffff;">science</i>
-                    </div>
+<svg xmlns="http://www.w3.org/2000/svg" height="90px" viewBox="0 -960 960 960" width="90px" fill="#f0feffff"><path d="M480.08-734q-30.08 0-51.58-21.42t-21.5-51.5q0-30.08 21.42-51.58t51.5-21.5q30.08 0 51.58 21.42t21.5 51.5q0 30.08-21.42 51.58t-51.5 21.5ZM372-80v-533H120v-60h720v60H588v533h-60v-260h-96v260h-60Z"/></svg>                    </div>
                     <div class="card-content">
                         <span class="card-title"><b><i>Resumo sobre o DUA</i></b></span>
                         <p><b>Um resumo sobre o DUA e sua importância...</b></p>

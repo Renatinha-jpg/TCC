@@ -10,7 +10,17 @@ $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);
     text-decoration-color: #4fa1eb; 
     text-decoration-thickness: 3px; 
   }
-  
+
+  .brand-logo img {
+    height: 60px;
+    width: auto;
+    max-width: 220px; 
+  }
+  @media only screen and (max-width: 992px) {
+    .brand-logo {
+      left: 5% !important;
+    }
+  }
 </style>
 
 <div class="navbar-fixed">
@@ -18,14 +28,16 @@ $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);
     <div class="nav-wrapper container">
 
       <a href="index.php" class="brand-logo">
-        <img src="img/PortalQuímico.png" height="90" width="250" alt="Portal Químico">
+        <img src="img/pq.png" height="60" width="250" alt="Portal Químico">
 </a>
 
       <ul class="right hide-on-med-and-down">
         <li><a class="black-text <?php echo $paginaCorrente == 'index.php' ? 'underline' : ''; ?>" href="index.php">Home</a></li>
         <li><a class="black-text <?php echo $paginaCorrente == 'materiais.php' ? 'underline' : ''; ?>" href="materiais.php">Materiais</a></li>
         <li><a class="black-text <?php echo $paginaCorrente == 'forum.php' ? 'underline' : ''; ?>" href="forum.php">Perguntas</a></li>
-
+<a href="#" data-target="mobile" class="sidenav-trigger black-text right">
+        <i class="material-icons">menu</i>
+      </a>
         <?php if (isset($_SESSION['id_usuario'])): ?>
 
           <?php if ($_SESSION['tipo'] === 'admin'): ?>

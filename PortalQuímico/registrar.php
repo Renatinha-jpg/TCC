@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <i class='bx bxs-lock'></i>
             </div>
 
-            <div id="mensagem-senha" style="text-align:center; margin:10px 0; min-height:24px;"></div>
+            <div id="mensagem-senha" style="text-align:center; margin:0 0; min-height:24px;"></div>
 
             <button type="submit" class="register" id="register" disabled>Registrar</button>
 
