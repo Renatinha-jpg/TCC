@@ -2,6 +2,12 @@
 session_start();
 include_once "conecta.php";
 include_once "auth.php";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (empty($_POST) && empty($_FILES) && $_SERVER['CONTENT_LENGTH'] > 0) {
+        $erro = "O arquivo enviado é muito grande. O limite do servidor é menor que o tamanho do arquivo. Tente um arquivo de até 30 MB (ou menor, dependendo da configuração do servidor).";
+    }
+}
+
 if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin') {
     header("Location: index.php");
     exit();
@@ -143,6 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
 
             <form method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="MAX_FILE_SIZE" value="31457280"> 
                 <div class="input-field">
                     <input type="text" name="nome" value="<?php echo htmlspecialchars($material['nome']); ?>" required>
                     <label>Título do Material</label>
@@ -190,6 +197,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             M.updateTextFields();
         });
     </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    M.updateTextFields();
+
+    const form = document.querySelector('form');
+    const fileInput = document.querySelector('input[type="file"]');
+
+    form.addEventListener('submit', function(e) {
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            const maxSize = 30 * 1024 * 1024;
+
+            if (file.size > maxSize) {
+                e.preventDefault();
+                M.toast({
+                    html: 'Erro: O arquivo excede o tamanho máximo de 30 MB.',
+                    classes: 'red rounded'
+                });
+            }
+        }
+    });
+});
+</script>
 </body>
 
 </html>

@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $eh_admin && isset($_POST['confirma
     </div>
     <div id="modalConfirmarResposta" class="modal">
         <div class="modal-content">
-            <h4><i class="material-icons left">preview</i> Confirmar Resposta Oficial</h4>
+            <h4>Confirmar Resposta</h4>
             <p>Você está prestes a publicar esta resposta oficial. Deseja continuar?</p>
 
             <div class="preview-content" id="previewResposta"></div>
